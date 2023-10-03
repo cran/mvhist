@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(graphics, lines, plot, points, polygon, text,title,abline)
+import(rgl)
+importFrom(mvmesh,UnitSphere,SolidRectangle,DrawSimplex3d,V2Hrep,SatisfyHrep)
+importFrom(SimplicialCubature,SimplexSurfaceArea)
+importFrom(grDevices,gray)
+importFrom(stats,quantile)
+importFrom(rcdd,scdd)
