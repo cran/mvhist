@@ -1,9 +1,9 @@
-128ce3632f323fc4377adff7a523c041 *DESCRIPTION
-9f5d11dd849ffc3419d5e97f64677e3b *NAMESPACE
+30f0a955964bd4bce49cade58209097f *DESCRIPTION
+04b4d50e9c50be095824e1d7210345cb *NAMESPACE
 c16f6f86c65262b9ab6ed58e5ab52905 *R/mvhist.R
 cbd9d161a34b6f8023ce83bac1cb8dfb *man/figures/mvhistCircle.png
 360d647c34007d037f8c73d99b94d4a9 *man/figures/mvhistCircle2.png
 a6300b13bbf6c2ae46ff53a95482ceb0 *man/figures/mvhistRectangle.png
-e053630b9736c0f109e8438d6c1c9121 *man/mvhist.Rd
-c68960127f17452acb7fc55f1a0ee49f *man/mvhistDirectional.Rd
-5a45915de2c7990b940ee47fd3384ab2 *man/mvhistMisc.Rd
+c9cc82d6ac9a51a67e6c70d630c9c49c *man/mvhist.Rd
+68d41f27c59344b4ac6474b9b98a52a7 *man/mvhistDirectional.Rd
+cf9a55f67c8e1959a6919f8281392e89 *man/mvhistMisc.Rd

@@ -18,7 +18,7 @@ histDirectionalAbsoluteThreshold( x, thresholds=0, p=2, k=3, positive.only=FALSE
 \arguments{
   \item{x}{data in an (n x d) matrix; rows are d-dimensional data vectors
 }
-  \item{k}{number of subdivisions
+  \item{k}{number of subdivisions, i.e. directional cones
 }
   \item{p}{power of p-norm
 }
@@ -70,13 +70,24 @@ of pluses and minuses, e.g. ++-- means the first two coordinates are positive an
 two are negative.
 }
 
-\examples{
+\section{Examples of directional histograms}{ 
+\figure{mvhistCircle.png}
 
+histSimplex example with plot.type="counts" 
+ 
+\figure{mvhistCircle2.png}
+
+histSimplex example with plot.type="pillars" 
+}
+
+\examples{
 # some directional, heavy tailed 2-dim data  
 n <- 1000
 A <- matrix( c(1,2, 4,1), nrow=2,ncol=2)
 x2 <- matrix( 0.0, nrow=n, ncol=2 )
-for (i in 1:n) { x2[i,] <- c( sum( A[1,] * (1/runif(1))), sum(A[2,] * (1/runif(1))) ) } 
+for (i in 1:n) { 
+  x2[i,] <- c( sum( A[1,] * (1/runif(1))), sum(A[2,] * (1/runif(1))) ) 
+} 
 
 # three dimensional positive data
 x3 <- matrix( abs(rnorm(9000)), ncol=3 )

@@ -6,10 +6,12 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Multivariate Histograms}
 \description{Tabulate and plot histograms for multivariate data, including directional histograms.
-This package used to be part of the \code{\link{mvmesh}} package, which works with multivariate meshes and grids.
+This package used to be part of the \code{\link[mvmesh]{mvmesh}} package, which works with multivariate meshes and grids.
 To simplify that package and make these functions more visible, this package was extracted as
 a self-standing package in Septemeber 2023.  The functions provided can tally the number of data points in
 a list of regions in dimensions two or more.  All regions/bins have flat sides.
+
+Version 1.2 (2025-10-15) makes a few changes in this documentation; no functions have changed.
 
 Several different plots are available to show 
 2 and 3 dimensional data; and one can deal with dimension greater than 3. 
@@ -25,11 +27,11 @@ histSimplex( x, S, plot.type="default", freq=TRUE, report="summary", ... )
 }
   \item{freq}{TRUE for a frequency histogram, FALSE for a relative frequency histogram.  See note about normalize.by.area
 }
-  \item{breaks}{specifes the subdivision of the region; see 'breaks' in \code{\link{SolidRectangle}} in package \code{\link{mvhist}}.
+  \item{breaks}{specifes the subdivision of the region; see 'breaks' in \code{\link[mvmesh]{SolidRectangle}} in package \code{\link[mvmesh]{mvmesh}}.
 }
   \item{plot.type}{type of plot, see details below
 }
-  \item{S}{(vps x d x nS) array of simplices in the V-representation, see \code{\link{V2Hrep}} in package \code{\link{mvhist}}.
+  \item{S}{(vps x d x nS) array of simplices in the V-representation, see \code{\link[mvmesh]{V2Hrep}} in package \code{\link[mvmesh]{mvmesh}}.
  The vector S[,i,j] gives the coordinates of the i-th vertex of the j-th simplex. 
 }
 
@@ -42,7 +44,7 @@ histSimplex( x, S, plot.type="default", freq=TRUE, report="summary", ... )
 \code{histRectangular} plots histogram based on a rectangular grid, while
 \code{histSimplex} plots histogram based on the simplices specified in \code{S},
 
-These routines use the functions and conventions of the package \code{\link{mvmesh}}.  In particular, 
+These routines use the functions and conventions of the package \code{\link[mvmesh]{mvmesh}}.  In particular, 
 shapes can be described in two formats: vertex representation or half-space representation,
 respectively called the V-representation or H-representation.  
 In all cases, the bins are simplices are converted to the H-representation and tallied by \code{TallyHrep}.
@@ -75,7 +77,7 @@ with the following fields:
 \item nx - total number of data points in x
 \item rel.freq - counts/nx
 \item rel.rejects - nrejects/nx
-\item mesh - object of type mvmesh, see \code{\link{mvmesh}}
+\item mesh - object of type mvmesh, see \code{\link[mvmesh]{mvmesh}}
 \item plot.type - input value
 \item report - input value
 }
@@ -93,21 +95,12 @@ package \code{rcdd} is loaded.
 
 It is possible, but takes some work, to specify regions using only rational numbers
 as coordinates, and if the data is rational, you will be able to exactly specify regions and possibily boundaries.
-See the help for packages \code{\link{mvmesh}} and \code{rcdd}.  Using rational coordinates 
+See the help for packages \code{\link[mvmesh]{mvmesh}} and \code{rcdd}.  Using rational coordinates 
 has not be tested in this package.}
 
-\section{Examples}{ 
+
+\section{Example of histRectangular}{ 
 \figure{mvhistRectangle.png}
-
-histRectangular example: 
-
-\figure{mvhistCircle.png}
-
-histSimplex example with plot.type="counts" 
- 
-\figure{mvhistCircle2.png}
-
-histSimplex example with plot.type="pillars" 
 }
 
 \examples{
@@ -158,3 +151,4 @@ sum(c(r$counts,r$nrejects))
 par(oldpar)
 }
 }
+

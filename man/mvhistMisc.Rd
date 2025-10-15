@@ -15,11 +15,11 @@ HrepCones( S )
 \arguments{
   \item{x}{data in an (n x d) matrix; rows are d-dimensional data vectors
 }
-  \item{S}{(vps x d x nS) array of simplices in V representation, see \code{\link{V2Hrep}}
+  \item{S}{(vps x d x nS) array of simplices in V representation, see \code{\link[mvmesh]{V2Hrep}}
 }
-  \item{H}{array of simplices in H representation, see \code{\link{V2Hrep}}
+  \item{H}{array of simplices in H representation, see \code{\link[mvmesh]{V2Hrep}}
 }
-  \item{report}{what information to return for tally}
+  \item{report}{what information to return for tally; one of "summary", "all", "none"}
   \item{height}{height of the pillars}
   \item{shift}{(x,y,z) shift of the pillars }   
   \item{\dots}{Optional arguments to plot, e.g. color="red", etc.}  
